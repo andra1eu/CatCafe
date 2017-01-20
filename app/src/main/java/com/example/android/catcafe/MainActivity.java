@@ -1,0 +1,34 @@
+package com.example.android.catcafe;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    public static final String RESERVATION = "RESERVATION";
+    EditText reservation;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        reservation = (EditText) findViewById(R.id.editText2);
+
+        if (savedInstanceState !=null){
+            reservation.setText(savedInstanceState.getString(RESERVATION));
+        }
+
+
+        //this is the code for the customed ActionBar
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //here you have to creat a new layout
+        TextView v = (TextView) getLayoutInflater().inflate(R.layout.custom_title_view, null);
+        getSupportActionBar().setCustomView(v);
+
+
+    }
+}

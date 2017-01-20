@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.example.android.catcafe.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/cat3" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/textView2"
+                android:layout_toStartOf="@+id/textView2"
+                android:src="@drawable/ic_paw" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Cat Cafe"
+                android:textColor="#D35F5F"
+                android:textSize="34sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="Adress:  Budapest, Révay u. 3, 1065 Hungary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:text="Opening Hours: (Monday - Sunday) 10 a.m. - 9 p.m."
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="Tel:  +36 20 617 3301"
+        android:textColor="#DE8787"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="8dp"
+        android:text="Make a reservation:"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2" />
+
+    <Button
+        android:text="Reserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DE8787"
+      android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/button" />
+
+</LinearLayout>
