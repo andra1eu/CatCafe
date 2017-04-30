@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CatCafe</string>
+    <string name="cat_cafe">Cat Cafe</string>
+    <string name="address">Adress: Budapest, Révay u. 3, 1065 Hungary</string>
+    <string name="opening_hours">Opening Hours: (Monday - Sunday) 10 a.m. - 9 p.m.</string>
+    <string name="tel">Tel: +36 20 617 3301</string>
+    <string name="reserve">Reserve</string>
+    <string name="make_a_reservation">Make a reservation:</string>
 </resources>

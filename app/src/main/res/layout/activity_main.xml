@@ -1,113 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1"
-    tools:context="com.example.android.catcafe.MainActivity">
+    android:layout_height="match_parent">
 
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
+            android:id="@+id/image_cat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/main_image_size"
             android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/cat3" />
 
-        <LinearLayout
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_between_related_view"
+            android:layout_marginRight="@dimen/margin_between_related_view"
+            android:layout_marginTop="@dimen/margin_between_related_view"
+            android:src="@drawable/ic_paw"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/image_cat" />
+
+
+        <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageView"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="8dp"
-            android:orientation="horizontal">
+            android:layout_marginLeft="@dimen/margin_between_related_view"
+            android:layout_marginRight="@dimen/margin_between_related_view"
+            android:layout_marginTop="@dimen/margin_between_related_view"
+            android:text="@string/cat_cafe"
+            android:textColor="#D35F5F"
+            android:textSize="34sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_cat" />
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_alignBottom="@+id/textView2"
-                android:layout_marginRight="16dp"
-                android:layout_toLeftOf="@+id/textView2"
-                android:layout_toStartOf="@+id/textView2"
-                android:src="@drawable/ic_paw" />
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_between_related_view"
+            android:layout_marginRight="@dimen/margin_between_related_view"
+            android:layout_marginTop="@dimen/margin_between_related_view"
+            android:gravity="center"
+            android:text="@string/address"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="Cat Cafe"
-                android:textColor="#D35F5F"
-                android:textSize="34sp" />
+        <TextView
+            android:id="@+id/hours"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_between_related_view"
+            android:layout_marginRight="@dimen/margin_between_related_view"
+            android:layout_marginTop="@dimen/margin_between_related_view"
+            android:gravity="center"
+            android:text="@string/opening_hours"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address" />
 
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_between_related_view"
+            android:layout_marginRight="@dimen/margin_between_related_view"
+            android:layout_marginTop="@dimen/margin_between_related_view"
+            android:gravity="center"
+            android:text="@string/tel"
+            android:textColor="#DE8787"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hours" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/reservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_between_related_view"
+            android:layout_marginRight="@dimen/margin_between_related_view"
+            android:layout_marginTop="@dimen/margin_between_related_view"
+            android:text="@string/make_a_reservation"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
 
-    </RelativeLayout>
+        <EditText
+            android:id="@+id/reservation_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_between_related_view"
+            android:layout_marginRight="@dimen/margin_between_related_view"
+            android:layout_marginTop="@dimen/margin_between_related_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservation" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:paddingBottom="8dp"
-        android:paddingTop="8dp"
-        android:text="Adress:  Budapest, Révay u. 3, 1065 Hungary"
-        android:textSize="16sp" />
+        <Button
+            android:id="@+id/reservation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_between_related_view"
+            android:layout_marginLeft="@dimen/margin_between_related_view"
+            android:layout_marginRight="@dimen/margin_between_related_view"
+            android:layout_marginTop="@dimen/margin_between_related_view"
+            android:background="#DE8787"
+            android:text="@string/reserve"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservation_name" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="16dp"
-        android:text="Opening Hours: (Monday - Sunday) 10 a.m. - 9 p.m."
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:paddingBottom="8dp"
-        android:paddingTop="8dp"
-        android:text="Tel:  +36 20 617 3301"
-        android:textColor="#DE8787"
-        android:textSize="16sp" />
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:paddingBottom="3dp"
-        android:paddingTop="8dp"
-        android:text="Make a reservation:"
-        android:textColor="#000000"
-        android:textSize="16sp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2" />
-
-    <Button
-        android:text="Reserve"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#DE8787"
-      android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp"
-        android:id="@+id/button" />
-
-</LinearLayout>

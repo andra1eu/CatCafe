@@ -8,27 +8,30 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     public static final String RESERVATION = "RESERVATION";
-    EditText reservation;
+    private EditText reservation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        reservation = (EditText) findViewById(R.id.editText2);
+        reservation = (EditText) findViewById(R.id.reservation_name);
 
-        if (savedInstanceState !=null){
+        if (savedInstanceState != null) {
             reservation.setText(savedInstanceState.getString(RESERVATION));
         }
 
-
-        //this is the code for the customed ActionBar
+        //this is the code for the costumed ActionBar
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        //here you have to creat a new layout
+        //here you have to create a new layout
         TextView v = (TextView) getLayoutInflater().inflate(R.layout.custom_title_view, null);
         getSupportActionBar().setCustomView(v);
+    }
 
-
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(RESERVATION, reservation.getText().toString());
     }
 }
